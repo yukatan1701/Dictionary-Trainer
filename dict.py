@@ -56,6 +56,16 @@ def get_args():
 def get_lower_set(s):
 	return frozenset([x.lower() for x in s])
 	
+def print_quit_help():
+	print('quit() or exit() or * - exit')
+	
+def print_training_help():
+	print()
+	print('end() - stop training')
+	print('menu() - stop and go to menu')
+	print_quit_help()
+	print()
+	
 def training():
 	print()
 	print((MAGENTA + 'Let\'s start! (mode: %s)' + RESET) % (modes[mode]))
@@ -97,6 +107,10 @@ def training():
 		elif comp == 'end()':
 			leave_command = 'end()'
 			break
+		elif comp == 'help()':
+			print_training_help()
+			please()
+			comp = input()
 		comp = clear(comp)
 		if comp.lower() not in get_lower_set(two):
 			wrong += 1
@@ -132,9 +146,17 @@ def set_to_file_str(s):
 		line += dict_sep + words[i]
 	return line
 
+def print_add_word_help():
+	print()
+	print('end() - stop adding words')
+	print('del() - word deleting mode')
+	print_quit_help()
+	print()
+
 def add_word():
 	print()
 	print('Use comma to add pair: eng_word_1/eng_word_n,rus_word_1/rus_word_n')
+	print("Enter 'end()' to stop")
 	commands = ('end()', 'del()')
 	all_commands = commands + quit_commands
 	new_words = {}
@@ -144,6 +166,9 @@ def add_word():
 		line = input()
 		if line in commands or line in quit_commands:
 			break
+		if line == 'help()':
+			print_add_word_help()
+			continue
 		pair = line.split(',')
 		if len(pair) != 2:
 			print('Incorrect pair syntax.')
@@ -280,6 +305,7 @@ LRED = '\033[0;31m'
 RED = '\033[1;31m'
 GREEN = '\033[1;32m'
 MAGENTA = '\033[1;35m'
+LIGHT_MAGENTA = '\033[0;35m'
 CYAN = '\033[1;36m'
 RESET = '\033[0m'
 
