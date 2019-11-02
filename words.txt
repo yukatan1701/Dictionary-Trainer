@@ -1,0 +1,38 @@
+salt,соль
+wound/injury/sour,рана
+rapture,упоение/восторг/восхищение
+sin/evil/guilt,грех
+resurrection,воскрешение
+sorrow,печаль/горе/скорбь
+redemption,выкуп
+pandemonium,столпотворение
+sacrament,причастие
+fear,страх
+writhe,терзаться
+wherever,где бы
+wicked,злой
+anxious,озабоченный
+cruel,жестокий
+torn apart,разрываться
+despair,отчаяние
+worship,поклоняться
+scent,запах
+shiver,дрожь
+tame,приручить
+will,желать
+prey,добыча
+trust,доверие
+glorious,славный
+stain,пачкать
+doubt,сомнение
+plea for mercy,просьба о пощаде
+tomb,гробница
+frail,хилый
+heretic,еретик
+seal,печать
+divine,божественный
+deaf,глухой
+eye,глаз
+note,заметки
+comma,запятая
+foot/leg,нога/ступня
